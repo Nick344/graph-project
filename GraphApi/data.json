@@ -1,0 +1,59 @@
+[
+  {
+    "city": "Київ",
+    "data": [
+      {
+        "group": "1",
+        "schedule": [
+          { "timeFrom": "06:00", "timeTo": "08:00" },
+          { "timeFrom": "14:00", "timeTo": "16:00" }
+        ]
+      },
+      {
+        "group": "2",
+        "schedule": [
+          { "timeFrom": "08:00", "timeTo": "10:00" },
+          { "timeFrom": "16:00", "timeTo": "18:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "city": "Житомир",
+    "data": [
+      {
+        "group": "1",
+        "schedule": [
+          { "timeFrom": "07:00", "timeTo": "09:00" },
+          { "timeFrom": "15:00", "timeTo": "17:00" }
+        ]
+      },
+      {
+        "group": "2",
+        "schedule": [
+          { "timeFrom": "09:00", "timeTo": "11:00" },
+          { "timeFrom": "17:00", "timeTo": "19:00" }
+        ]
+      },
+      {
+        "group": "3",
+        "schedule": [
+          { "timeFrom": "11:00", "timeTo": "13:00" },
+          { "timeFrom": "19:00", "timeTo": "21:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "city": "Львів",
+    "data": [
+      {
+        "group": "1",
+        "schedule": [
+          { "timeFrom": "06:30", "timeTo": "08:30" },
+          { "timeFrom": "14:30", "timeTo": "16:30" }
+        ]
+      }
+    ]
+  }
+]

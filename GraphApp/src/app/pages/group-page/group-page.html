@@ -1,0 +1,8 @@
+<label for="group">Група</label>
+<input type="text" [(ngModel)]="selectedGroup" name="group">
+
+
+
+<button type="submit" (click)="search()">Пошук</button>
+
+<p *ngIf="statusMessage">{{ statusMessage }}</p>

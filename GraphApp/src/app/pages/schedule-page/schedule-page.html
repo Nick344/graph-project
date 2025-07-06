@@ -1,0 +1,30 @@
+<form>
+  <select [(ngModel)]="selectedCity" name="city">
+    <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+  </select>
+
+  <label for="date">Дата</label>
+  <input type="date" [(ngModel)]="selectedDate" name="date">
+
+<!--  <label for="group">Група</label>
+  <input type="text" [(ngModel)]="selectedGroup" name="group">-->
+
+  <button type="submit" (click)="search()">Пошук</button>
+</form>
+
+<p *ngIf="statusMessage">
+  {{statusMessage}}
+</p>
+
+<div *ngIf="groupSchedules.length > 0">
+  <div *ngFor="let group of groupSchedules">
+    <p>Група {{group.group}}</p>
+    <ul>
+      <li *ngFor="let schedule of group.schedule">
+        {{schedule.timeFrom}} - {{schedule.timeTo}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+
