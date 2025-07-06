@@ -1,0 +1,42 @@
+1.
+SELECT *
+From Address
+Where GroupId is null
+
+2.
+SELECT *
+From Schedule
+Join Address ON Address.GroupId = Schedule.GroupId
+Where Address.Address = "Бойченко 30"
+
+3.
+SELECT GroupId, COUNT(*) AS Count
+From Schedule
+Where Day = 'Неділя'
+Group BY GroupId
+Order BY Count DESC
+LIMIT 1
+
+4.
+SELECT GroupId, SUM(TIME_TO_SEC(TIMEDIFF(FinishTime, StartTime))) AS TotalSeconds
+From Schedule
+Where Day IN ('Понеділок', 'Вівторок', 'Середа')
+Group BY GroupId
+Order BY TotalSeconds DESC
+LIMIT 1
+
+5.
+UPDATE Address
+Set GroupId = 4
+Where Address = 'Бажана 14'
+
+6.
+INSERT into Address (Address, GroupId)
+Values ('Примерна 1', 2),('Фантазійна 7', 3)
+
+7.
+INSERT into Schedule (Day, StartTime, FinishTime, GroupId)
+Values ('П’ятниця', '(7:00', '11:00', 2)
+
+
+
